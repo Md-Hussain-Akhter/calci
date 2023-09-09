@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body{
+            background-color: bisque;
+        }
+        input{
+            
+            margin: 12px;
+            border-radius: 20px ;
+        border: 2px solid gray;
+        background-color: lightblue;
+        }
+        button{
+            margin: 10px;
+            background-color: red;
+            width: 140px;
+            border-radius: 30px;
+            color: white;
+            align-items: center;
+        }
+        fieldset{
+            width: 150px;
+            border-radius: 40px;
+            background-color: lightblue;
+        }
+         
+     </style>
+  
+    <title>Calculater</title>
+</head>
+<body>
+    <center>
+   
+        <fieldset>
+            <legend><h1><b><marquee behavior="right" direction="left">Calculater</marquee></b></h1></legend> 
+            <center><img src="1011914.png" alt=""></center>
+ <input id="num1" type="number"placeholder="num1">
+ <input id="num2" type="number"placeholder="num2">    
+<input type="number" id="demo">
+
+<button id="btn">add</button>
+<button id="btn1">sub</button>
+<button id="btn2">multipliction</button>
+</fieldset>
+</center>
+ 
+<script>
+    var result=document.getElementById("demo");
+    const button=document.getElementById("btn");
+    const button1=document.getElementById("btn1");
+    const button2=document.getElementById("btn2");
+    const add =()=>{
+        var a=document.getElementById("num1").value
+       var b=document.getElementById("num2").value
+
+        result.value=parseInt(a)+parseInt(b);
+
+    }
+    button.addEventListener("click",add)
+
+    const sub =()=>{
+        var a=document.getElementById("num1").value
+        var b=document.getElementById("num2").value
+        result.value=parseInt(a)-parseInt(b);
+    }
+    button1.addEventListener("click",sub)
+
+    const mul=()=>{
+        const a=document.getElementById("num1").value
+        const b=document.getElementById("num2").value
+        result.value=parseInt(a)*parseInt(b);
+    }
+    button2.addEventListener("click",mul)
+</script>
+
+    </script>
+</body>
+</html>
